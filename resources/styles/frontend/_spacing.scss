@@ -1,0 +1,8 @@
+@for $i from 1 through 4 {
+  .m-#{$i} {
+    margin: $i*8px;
+  }
+  .ml-#{$i} {
+    margin-left: $i*8px;
+  }
+}

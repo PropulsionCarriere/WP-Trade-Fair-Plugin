@@ -1,0 +1,16 @@
+.tf-company-card {
+  .tf-company-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: map_get($font-size,'l');
+  }
+}
+
+.tf-company-logo-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}

@@ -1,0 +1,22 @@
+.tf-profile-nav {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  .tf-name {
+    font-weight: bold;
+  }
+  .tf-nav-bar {
+    ul {
+      margin: 0;
+      list-style: none;
+      li {
+        margin: 5px;
+        padding: 0.1rem 0.4rem;
+      }
+    }
+  }
+}

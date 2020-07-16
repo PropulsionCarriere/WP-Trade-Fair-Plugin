@@ -1,0 +1,10 @@
+.tf-companies-grid{
+  display: grid;
+}
+
+@for $i from 1 through 4 {
+  .grid-#{$i} {
+    grid-template-columns: repeat($i, 100%/$i);
+    column-gap: 20px
+  }
+}

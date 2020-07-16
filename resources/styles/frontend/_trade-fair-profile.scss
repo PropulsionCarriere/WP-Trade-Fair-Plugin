@@ -1,0 +1,17 @@
+.tf-profile-form-wrapper {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 2rem;
+  background-color: white;
+}
+.tf-success {
+  color: green;
+}
+.media-router {
+  .media-menu-item {
+    color: #016087;
+    &.active {
+      color: darken(map_get($color, "material-grey"), 90);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.tf-form-row {
+  margin-bottom: 15px;
+  display: flex;
+  width: 100%;
+}
+
+.tf-input-field {
+  width: 100%;
+  label {
+    font-weight: bold;
+  }
+}
+
+.tf-media-upload {
+  .image-preview-wrapper {
+    width: 100%;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+  input[type=button]{
+    width: 100%;
+  }
+  .filename {
+    font-size: map_get($font-size,'s');
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    background-color: lighten(map_get($color,'material-grey'), 30);
+  }
+}
+
+.tf-field-error {
+  color: darkred;
+  font-size: map_get($font-size,'s');
+}
