@@ -58,7 +58,19 @@ class Rule
 	public static function file($attachmentId){
 		$type = get_post_mime_type($attachmentId);
 		self::assertTrue(preg_match("#^application/.*#",$type), "This needs to be a file.");
-		return$attachmentId;
+		return $attachmentId;
+	}
+
+	/**
+	 * @param $value
+	 * @return mixed
+	 * @throws NullableException
+	 */
+	public static function optional($value){
+		if (empty($value)){
+			throw new NullableException("Skipping next rules. Value is null");
+		}
+		return $value;
 	}
 
 }

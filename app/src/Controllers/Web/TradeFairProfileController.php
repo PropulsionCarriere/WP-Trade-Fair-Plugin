@@ -37,7 +37,7 @@ class TradeFairProfileController extends Controller {
 				'TradeFair\Validation\Rule::text',
 			],
 			UserMeta::COMPANY_WEBSITE => [
-				'TradeFair\Validation\Rule::required',
+				'TradeFair\Validation\Rule::optional',
 				'TradeFair\Validation\Rule::url',
 			],
 			UserMeta::COMPANY_CONFERENCE_LINK => [
@@ -49,7 +49,7 @@ class TradeFairProfileController extends Controller {
 				'TradeFair\Validation\Rule::image',
 			],
 			UserMeta::COMPANY_SALES_BROCHURE => [
-				'TradeFair\Validation\Rule::required',
+				'TradeFair\Validation\Rule::optional',
 				'TradeFair\Validation\Rule::file',
 			]
 		], $request);

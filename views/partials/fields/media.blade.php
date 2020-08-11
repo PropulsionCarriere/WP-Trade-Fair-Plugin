@@ -1,8 +1,9 @@
 <div class="tf-input-field{{isset($class)?" ".$class:""}}">
 	<label for="{{$name}}">{{__($label)}}</label>
 	<div class="tf-media-upload" data-media-upload="{{$name}}">
+		<input data-media-unset="{{$name}}" class="unset-button" type="button" value="X"/>
 		<div class='image-preview-wrapper'>
-			@isset($id)
+			@if($id)
 				@if($src = TradeFair::core()->image()->thumbnail( $id, 200, 200, false ))
 					<img class="media-preview" src="{{$src}}" alt="company's logo"/>
 				@else
@@ -12,13 +13,14 @@
 				@endif
 			@else
 				<div class="placeholder"></div>
-			@endisset
+			@endif
 		</div>
 		<input id="{{$name}}" type="button"
-			   @isset($id) value="{{__( 'Change')}}"
+			   @if($id) value="{{__( 'Change')}}"
 			   @else value="{{__( 'Select')}}"
-			   @endisset/>
+			   @endif/>
 		<input type='hidden' name='{{$name}}' id='image_attachment_id' value='{{$id}}'>
+
 	</div>
 	@include('partials.fields.field-validation-error',['name'=>$name])
 </div>

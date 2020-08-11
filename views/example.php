@@ -9,5 +9,5 @@
 
 ?>
 <div class="trade_fair__view">
-	<?php \TradeFair::render( 'partials/example', [ 'message' => __( 'Hello World!', 'trade_fair' ) ] ); ?>
+	<?php \TradeFair::render( 'partials/example', [ 'message' => __( 'Hello World!', 'trade_fair') ] ); ?>
 </div>

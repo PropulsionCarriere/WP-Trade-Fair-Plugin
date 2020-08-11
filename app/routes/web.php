@@ -24,8 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 TradeFair::route()->middleware('user.logged_in')
 	->url('/trade-fair-profile/')
+	->name('tf-profile')
 	->group(function (){
 		TradeFair::route()->get()->handle("TradeFairProfileController@index");
-		TradeFair::route()->middleware('validation')->post()->handle('TradeFairProfileController@update');
+		TradeFair::route()->middleware('validation')->name('.update')->post()->handle('TradeFairProfileController@update');
 	});
 

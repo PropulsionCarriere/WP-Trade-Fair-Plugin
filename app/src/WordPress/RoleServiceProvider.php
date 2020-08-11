@@ -26,7 +26,6 @@ class RoleServiceProvider implements ServiceProviderInterface {
 	}
 
 	public function addRoles(){
-		remove_role('exhibitor');
 		add_role( "exhibitor", __("Exhibitor", 'trade_fair'), [
 			'read' => true,
 			'upload_files' => true,

@@ -2,6 +2,8 @@
 
 namespace TradeFair\WordPress;
 
+use TradeFair;
+use WP_User_Query;
 use WPEmerge\ServiceProviders\ServiceProviderInterface;
 
 /**
@@ -19,8 +21,7 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 	 * {@inheritDoc}
 	 */
 	public function bootstrap( $container ) {
-		// phpcs:ignore
-		// add_shortcode( 'example', [$this, 'shortcodeExample'] );
+		add_shortcode( 'tf-companies', [$this, 'shortcodeCompanies'] );
 	}
 
 	/**
@@ -30,26 +31,19 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 	 * @param  string $content
 	 * @return string
 	 */
-	public function shortcodeExample( $atts, $content ) {
+	public function shortcodeCompanies( $atts, $content ) {
 		$atts = shortcode_atts(
 			array(
-				'example_attribute' => 'example_value',
+				'n_cols' => '2',
 			),
 			$atts,
-			'example'
+			'tf-companies'
 		);
+		$exhibitorsQuery = new WP_User_Query([
+			'role'           => 'exhibitor',
+		]);
+		return TradeFair::view( 'trade-fair-companies-grid' )->with( $atts )->with('exhibitors', $exhibitorsQuery->get_results())->toString();
 
-		ob_start();
-		?>
-		<div class="shortcode-example">
-			<!-- Your shortcode content goes here ... -->
-		</div>
-		<?php
-		$html = ob_get_clean();
 
-		// Alternatively, you can use a WP Emerge View instead of a buffer:
-		// $html = \TradeFair::view( 'some-view' )->with( $atts )->with( 'content', $content )->toString();
-
-		return $html;
 	}
 }

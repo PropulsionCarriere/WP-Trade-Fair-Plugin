@@ -4,6 +4,7 @@
 namespace TradeFair\Controllers;
 
 
+use TradeFair\Validation\NullableException;
 use TradeFair\Validation\RuleNotRespectedException;
 use TradeFair\Validation\ValidationException;
 use WPEmerge\Requests\Request;
@@ -14,8 +15,8 @@ class Controller
 
 	public function __construct()
 	{
-		add_filter('pre_get_document_title', [$this, 'setPageTitleCallBack']);
-		add_action( 'wp_enqueue_scripts', [$this, 'enqueueFrontendAssets'] );
+		add_filter('pre_get_document_title', [$this, 'setPageTitleCallBack'], 20);
+		add_action( 'wp_enqueue_scripts', [$this, 'enqueueFrontendAssets'], 20 );
 	}
 
 	public function setPageTitleCallBack($title){
@@ -39,6 +40,8 @@ class Controller
 				$value = $this->applyRules($value, $rules);
 			} catch (RuleNotRespectedException $e){
 				$errors[$fieldName] = $e->getMessage();
+			} catch (NullableException $e) {
+				$value = null;
 			}
 			$outputs[$fieldName] = $value;
 		}

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const frames = [];
   document.querySelectorAll('[data-media-upload]').forEach((node) => {
     const name = node.getAttribute('data-media-upload');
-    node.querySelector('[type=button]').addEventListener('click', (event) => {
+    node.querySelector('#'+name).addEventListener('click', (event) => {
       event.preventDefault();
       if (frames[name] === undefined) {
         frames[name] = wp.media({
@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             placeholderText.innerHTML = attachment.title;
             preview.append(placeholderText);
           }
-          node.querySelector('[type=button]').setAttribute('value', lang.change_label);
+
+          node.querySelector(`input#${name}[type=button]`).setAttribute('value', lang.change_label);
           node.querySelector('[type=hidden]').setAttribute('value', attachment.id);
         });
       }
@@ -37,4 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
       frame.open();
     });
   });
+});
+
+document.querySelectorAll('[data-media-unset]').forEach((node) => {
+  const name = node.getAttribute('data-media-unset');
+  node.onclick = () => {
+    document.querySelector(`[name=${name}]`).value = 0;
+    document.querySelector(`[data-media-upload=${name}] .image-preview-wrapper`).innerHTML = '<div class="placeholder"></div>';
+  };
 });

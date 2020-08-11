@@ -6,17 +6,24 @@
 
 .tf-input-field {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   label {
     font-weight: bold;
   }
 }
 
 .tf-media-upload {
+  position: relative;
   .image-preview-wrapper {
     width: 100%;
+    background-color: lighten(map_get($color,'material-grey'), 30);
     img {
       height: auto;
       width: 100%;
+    }
+    .placeholder {
+      height: 35px;
     }
   }
   input[type=button]{
@@ -27,7 +34,15 @@
     text-align: center;
     padding: 8px;
     margin: 0;
-    background-color: lighten(map_get($color,'material-grey'), 30);
+  }
+  .unset-button {
+    background-color: transparent;
+    border: 0px;
+    font-size: 2rem;
+    color: var(--tf-accent-color, #cd2653);
+    padding: 0.5em;
+    position: absolute;
+    text-align: right;
   }
 }
 
@@ -35,3 +50,4 @@
   color: darkred;
   font-size: map_get($font-size,'s');
 }
+
