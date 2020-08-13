@@ -15,7 +15,7 @@
 				<div class="placeholder"></div>
 			@endif
 		</div>
-		<input id="{{$name}}" type="button"
+		<input id="{{$name}}" class="media-button" type="button"
 			   @if($id) value="{{__( 'Change')}}"
 			   @else value="{{__( 'Select')}}"
 			   @endif/>

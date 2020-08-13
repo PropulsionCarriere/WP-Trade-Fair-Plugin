@@ -14,7 +14,7 @@ class Rule
 	 */
 	public static function required($value){
 		$value = trim($value);
-		self::assertFalse(empty($value), "This field is required.");
+		self::assertFalse(empty($value), __("This field is required.", 'trade_fair'));
 		return $value;
 	}
 
@@ -41,7 +41,7 @@ class Rule
 	}
 
 	public static function url($value){
-		self::assertTrue(preg_match("#^https?://.+#",$value), "This is not a valid url.");
+		self::assertTrue(preg_match("#^https?://.+#",$value), __("This is not a valid url.", 'trade_fair'));
 		return $value;
 	}
 
@@ -51,13 +51,13 @@ class Rule
 
 	public static function image($attachmentId){
 		$type = get_post_mime_type($attachmentId);
-		self::assertTrue(preg_match("#^image/.*#",$type), "This needs to be an image.");
+		self::assertTrue(preg_match("#^image/.*#",$type), __("This needs to be an image.", 'trade_fair'));
 		return $attachmentId;
 	}
 
 	public static function file($attachmentId){
 		$type = get_post_mime_type($attachmentId);
-		self::assertTrue(preg_match("#^application/.*#",$type), "This needs to be a file.");
+		self::assertTrue(preg_match("#^application/.*#",$type), __("This needs to be a file.", 'trade_fair'));
 		return $attachmentId;
 	}
 

@@ -1,5 +1,5 @@
 _This is the Trade Fair project_.
-A modern WordPress plugin which uses the [WP Emerge](https://github.com/htmlburger/wpemerge) framework.
+A modern WordPress plugin which uses the [WP Emerge](https://github.com/htmlburger/wpemerge) framework. It is currently available in French and English.
 
 ## Summary
 
@@ -16,15 +16,23 @@ Add user in the WP Dashboard with the Exhibitor group.
 
 **Modifying companies information**
 
-If you are an admin, you can do it in the user's settings
-If you are a company, log in with you account and you will be redirected to your Trade Fair Profile. From there you can modify your informations.
+If you are an admin, you can do it in the user's settings.
+If you are a company, log in with you account and you will be redirected to your Trade Fair Profile. From there you can modify your information. The plugin creates a new endpoint at yoursite.com/trade-fair-profile.
 
 **Modifying Trade Fair Data**
 
 Go to the WP Dashboard and in the Trade Fair section. Make your changes and press save.
 
+**Displaying companies**
+
+To display the companies you can use the Gutenberg Block if your theme supports Gentenberg.
+You can also use the shortcode ```[tf-companies n_cols=3]```. The n_cols argument is used to specify the number of columns. Supported values are 1 to 4.
+
 ### Installation
 
+Upload the released folder using FTP or the zipped version using the dashboard.
+
+N.B: I don't know why, but on some installations the exhibitor role has to have the delete_users permission to be able to see and upload images in the Trade Fair Profile section.
 
 ### Suggested plugins
 
@@ -48,5 +56,5 @@ The current css is very light. You can easily modify the appearance by overridin
 
 ## Development Team
 
-This Trade Fair plugin is developped by Michael Duchesne from Propulsion Carrière a practice enterprise.
+This Trade Fair plugin is developped by [Michael Duchesne](https://github.com/Mick00) from [Propulsion Carrière](https://propulsioncarriere.ca) a practice enterprise.
 WPEmerge is developped by [Atanas Angelov](https://atanas.dev/) at [htmlBurger](http://htmlburger.com).

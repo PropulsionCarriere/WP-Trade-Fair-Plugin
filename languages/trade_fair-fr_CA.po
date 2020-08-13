@@ -4,102 +4,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trade Fair 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tradefair\n"
-"POT-Creation-Date: 2020-07-20 14:32:08+00:00\n"
+"POT-Creation-Date: 2020-08-13 13:15:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-07-20 15:15+0000\n"
+"PO-Revision-Date: 2020-08-13 13:22+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français du Canada\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: fr_CA\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Loco-Version: 2.4.0; wp-5.4.2"
+"X-Loco-Version: 2.4.2; wp-5.4.2"
 
 #: app/src/CarbonFields/Blocks/exhibitors-block.php:6
 msgid "Trade Fair Participants"
-msgstr ""
+msgstr "Participants de la foire"
 
 #: app/src/CarbonFields/Blocks/exhibitors-block.php:8
 #: app/src/CarbonFields/Blocks/exhibitors-block.php:9
 msgid "Click on the \"eye icon\" above for a preview of the block"
-msgstr ""
+msgstr "Cliquer sur l'oeil pour prévisualiser le bloc"
 
 #: app/src/CarbonFields/Blocks/exhibitors-block.php:10
 msgid "Number of columns"
-msgstr ""
+msgstr "Nombre de colonnes"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:77
 msgid "Theme Options"
-msgstr ""
+msgstr "Options du thème"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:80
 msgid "Google Maps API Key"
-msgstr ""
+msgstr "Clé d'API Google Maps"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:81
 msgid "Header Script"
-msgstr ""
+msgstr "Script d'en-tête"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:82
 msgid "Footer Script"
-msgstr ""
+msgstr "Script de pied de page"
 
 #. Plugin Name of the plugin/theme
 msgid "Trade Fair"
-msgstr ""
+msgstr "Foire"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:86
 msgid "Trade Fair name"
-msgstr ""
+msgstr "Nom de la foire"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:87
 msgid "Fair start date"
-msgstr ""
+msgstr "Date du début de la foire"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:88
 msgid "Fair end date"
-msgstr ""
+msgstr "Date de fin de la foire"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:89
 msgid "Daily start time"
-msgstr ""
+msgstr "Heure de fin"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:90
 msgid "Daily end time"
-msgstr ""
+msgstr "Heure de début"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:114
 msgid "Online Trade Fair"
-msgstr ""
+msgstr "Foire en ligne"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:117
-msgid "Your company's logo"
-msgstr ""
+msgid "Your company's profile"
+msgstr "Votre profil de companie"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:118
-msgid "Your company's name"
-msgstr ""
+msgid "Company's logo"
+msgstr "Logo de la companie"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:119
-msgid "Your company's description"
-msgstr ""
+msgid "Company's name"
+msgstr "Nom de la companie"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:123
-msgid "Link to your website"
-msgstr ""
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:120
+msgid "Company's description"
+msgstr "Description"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:124
-msgid "Video conference tool link"
-msgstr "Lien vidéo conférence"
+msgid "Website link"
+msgstr "Lien de votre site"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:125
+msgid "Conference tool link"
+msgstr "Lien vers la conférence"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
 msgid "Sales brochure"
-msgstr ""
+msgstr "Brochure"
 
 #: app/src/Controllers/Web/TradeFairProfileController.php:19
 msgid "Trade Fair Profile"
-msgstr ""
+msgstr "Profil de la foire"
+
+#: app/src/Controllers/Web/TradeFairProfileController.php:59
+msgid "Your profile has been updated successfully."
+msgstr "Votre profil a été mis à jour"
 
 #: app/src/Controllers/Web/TradeFairProfileController.php:73
 msgid "Change"
@@ -107,35 +115,51 @@ msgstr "Changer"
 
 #: app/src/Controllers/Web/TradeFairProfileController.php:74
 msgid "Select or upload a media"
-msgstr ""
+msgstr "Selectionner ou téléverser un fichier"
 
 #: app/src/Controllers/Web/TradeFairProfileController.php:75
 msgid "Use selected"
-msgstr ""
+msgstr "Utiliser l'élément selectionné"
 
 #: app/src/Controllers/Web/TradeFairProfileController.php:76
 msgid "Preview unavailable"
-msgstr ""
+msgstr "Prévisualisation indisponible"
+
+#: app/src/Validation/Rule.php:17
+msgid "This field is required."
+msgstr "Ce champs est requis."
+
+#: app/src/Validation/Rule.php:44
+msgid "This is not a valid url."
+msgstr "Cette adresse n'est pas valide"
+
+#: app/src/Validation/Rule.php:54
+msgid "This needs to be an image."
+msgstr "Ce fichier doit être une image"
+
+#: app/src/Validation/Rule.php:60
+msgid "This needs to be a file."
+msgstr "Ce fichier doit être un fichier d'application"
 
 #: app/src/Widgets/Carbon_Rich_Text_Widget.php:18
 msgid "Rich Text"
-msgstr ""
+msgstr "Texte riche"
 
 #: app/src/Widgets/Carbon_Rich_Text_Widget.php:19
 msgid "Displays a block with title and WYSIWYG content."
-msgstr ""
+msgstr "Affiche un block avec un titre."
 
 #: app/src/Widgets/Carbon_Rich_Text_Widget.php:21
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: app/src/Widgets/Carbon_Rich_Text_Widget.php:22
 msgid "Content"
-msgstr ""
+msgstr "Contenu"
 
 #: app/src/WordPress/RoleServiceProvider.php:29
 msgid "Exhibitor"
-msgstr ""
+msgstr "Exposant"
 
 #. Translators: %1$s = plugin or theme name; %2$s = minimum version number;
 #. %3$s = maximum version number; %4$s plugin or theme name; %5$s loaded
@@ -145,14 +169,30 @@ msgid ""
 "%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already "
 "loaded version %5$s."
 msgstr ""
+"%1$s utilise WP Emerge version >= %2$s et< %3$s , mais %4$s a déjà chargé "
+"%5$s."
 
 #: views/example.php:12
 msgid "Hello World!"
+msgstr "Hello World!"
+
+#: views/trade-fair-company-card.blade.php:19
+msgid "Contact now"
+msgstr "Contacter"
+
+#: views/trade-fair-company-card.blade.php:22
+msgid "Learn More"
+msgstr "En savoir plus"
+
+#: views/trade-fair-company-card.blade.php:25
+msgid "Download sales brochure"
+msgstr "Télécharger la brochure"
+
+#. Description of the plugin/theme
+msgid "A plugin to facilitate trade fair organization"
 msgstr ""
+"Un plugin pour faciliter l'organisation des foires commerciales en ligne"
 
 #. Author of the plugin/theme
 msgid "Michael Duchesne"
-msgstr ""
-
-msgid "Company's name"
-msgstr "Nom de la companie"
+msgstr "Michael Duchesne"

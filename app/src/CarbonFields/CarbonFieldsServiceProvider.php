@@ -114,14 +114,15 @@ class CarbonFieldsServiceProvider implements ServiceProviderInterface {
 		Container::make( 'user_meta', __('Online Trade Fair', 'trade_fair') )
 			->where('user_role', '=', 'exhibitor')
 			->add_fields([
-				Field::make('image', UserMeta::COMPANY_LOGO, __('Your company\'s logo', 'trade_fair') ),
-				Field::make('text', UserMeta::COMPANY_NAME, __('Your company\'s name', 'trade_fair') ),
-				Field::make('textarea', UserMeta::COMPANY_DESC, __('Your company\'s description', 'trade_fair'))
+				Field::make('separator', 'tf-company-separator', __('Your company\'s profile', 'trade_fair')),
+				Field::make('image', UserMeta::COMPANY_LOGO, __('Company\'s logo', 'trade_fair') ),
+				Field::make('text', UserMeta::COMPANY_NAME, __('Company\'s name', 'trade_fair') ),
+				Field::make('textarea', UserMeta::COMPANY_DESC, __('Company\'s description', 'trade_fair'))
 					->set_help_text('(150 characters maximum)')
 					->set_attribute('maxLength',150)
 					->set_rows(3),
-				Field::make('text', UserMeta::COMPANY_WEBSITE, __('Link to your website', 'trade_fair')),
-				Field::make('text', UserMeta::COMPANY_CONFERENCE_LINK, __('Video conference tool link', 'trade_fair')),
+				Field::make('text', UserMeta::COMPANY_WEBSITE, __('Website link', 'trade_fair')),
+				Field::make('text', UserMeta::COMPANY_CONFERENCE_LINK, __('Conference tool link', 'trade_fair')),
 				Field::make('file', UserMeta::COMPANY_SALES_BROCHURE, __('Sales brochure', 'trade_fair'))
 			]);
 	}

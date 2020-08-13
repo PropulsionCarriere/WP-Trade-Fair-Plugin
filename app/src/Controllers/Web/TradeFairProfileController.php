@@ -56,7 +56,7 @@ class TradeFairProfileController extends Controller {
 		foreach ($inputs as $field => $value){
 			$this->updateCurrentUserField($field, $value);
 		}
-		\TradeFair::flash()->add('tf-profile-success', 'Your profile has been updated successfully.');
+		\TradeFair::flash()->add('tf-profile-success', __('Your profile has been updated successfully.', 'trade_fair'));
 		return \TradeFair::redirect()->back(home_url('/trade-fair-profile/'));
 	}
 
