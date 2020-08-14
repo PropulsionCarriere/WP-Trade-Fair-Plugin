@@ -1,5 +1,6 @@
 .tf-companies-grid{
   display: grid;
+  justify-items: stretch;
 }
 
 @for $i from 1 through 4 {

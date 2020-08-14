@@ -1,8 +1,15 @@
 .tf-company-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .tf-company-name {
     text-align: center;
     font-weight: bold;
     font-size: map_get($font-size,'l');
+  }
+
+  .tf-company-card-body {
+    flex: 1 0 auto;
   }
 }
 

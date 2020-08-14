@@ -3,11 +3,11 @@
  * Plugin Name: Trade Fair
  * Plugin URI:
  * Description: A plugin to facilitate trade fair organization
- * Version: 0.1.1
+ * Version: 0.1.2
  * Requires at least: 4.7
  * Requires PHP: 5.5.9
  * Author: Michael Duchesne
- * Author URI:
+ * Author URI: https://github.com/Mick00
  * License: GPL-2.0-only
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: trade_fair
