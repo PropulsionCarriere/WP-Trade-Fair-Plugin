@@ -1,4 +1,4 @@
-@include('welcome')
+
 <div class="tf-companies-grid grid-{{$n_cols??2}}">
 	@if(count($exhibitors) > $n_cols && $period = TradeFair::schedule()->getCurrentPeriod())
 		@include('trade-fair-rotating-companies-list',[

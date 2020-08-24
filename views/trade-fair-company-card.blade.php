@@ -10,7 +10,7 @@
 		@if($name = carbon_get_user_meta($company->id, TradeFair\CarbonFields\UserMeta::COMPANY_NAME))
 			<p class="tf-company-name">{{$name}}</p>
 		@endif
-		@if($description = carbon_get_user_meta($company->id, TradeFair\CarbonFields\UserMeta::COMPANY_DESC))
+		@if($description = TradeFair::getCompanyDescription($company))
 			<p class="tf-company-description">{{$description}}</p>
 		@endif
 	</div>

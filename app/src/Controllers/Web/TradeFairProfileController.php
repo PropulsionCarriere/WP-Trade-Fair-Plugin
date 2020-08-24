@@ -26,7 +26,17 @@ class TradeFairProfileController extends Controller {
 				'required',
 				'text',
 			],
-			UserMeta::COMPANY_DESC => [
+			UserMeta::COMPANY_DESC_DEFAULT => [
+				'required',
+				'text',
+				function ($value){
+					if (strlen($value)>150){
+						throw new RuleNotRespectedException("The field cannot be over 150 characters");
+					}
+					return $value;
+				},
+			],
+			UserMeta::COMPANY_DESC_EN => [
 				'required',
 				'text',
 				function ($value){

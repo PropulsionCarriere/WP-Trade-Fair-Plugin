@@ -119,7 +119,11 @@ class CarbonFieldsServiceProvider implements ServiceProviderInterface {
 				Field::make('separator', 'tf-company-separator', __('Your company\'s profile', 'trade_fair')),
 				Field::make('image', UserMeta::COMPANY_LOGO, __('Company\'s logo', 'trade_fair') ),
 				Field::make('text', UserMeta::COMPANY_NAME, __('Company\'s name', 'trade_fair') ),
-				Field::make('textarea', UserMeta::COMPANY_DESC, __('Company\'s description', 'trade_fair'))
+				Field::make('textarea', UserMeta::COMPANY_DESC_DEFAULT, __('Company\'s description (French)', 'trade_fair'))
+					->set_help_text('(150 characters maximum)')
+					->set_attribute('maxLength',150)
+					->set_rows(3),
+				Field::make('textarea', UserMeta::COMPANY_DESC_EN, __('Company\'s description (English)', 'trade_fair'))
 					->set_help_text('(150 characters maximum)')
 					->set_attribute('maxLength',150)
 					->set_rows(3),

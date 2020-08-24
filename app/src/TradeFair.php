@@ -2,6 +2,7 @@
 
 use TradeFair\TradeFairSchedule;
 use WPEmerge\Application\ApplicationTrait;
+use \TradeFair\CarbonFields\UserMeta;
 
 /**
  * @mixin \WPEmergeAppCore\Application\ApplicationMixin
@@ -64,6 +65,26 @@ class TradeFair {
 			return !in_array($country, $countries);
 		});
 		return $exhibitors;
+	}
+
+	public function getCompanyDescription($company){
+		$locale = explode("_", get_locale());
+		$language = $locale[0];
+		$metaField = UserMeta::COMPANY_DESC_DEFAULT;
+		switch ($language){
+			case "fr":
+				break;
+			case "en":
+				$metaField = UserMeta::COMPANY_DESC_EN;
+				break;
+			default:
+				$metaField = UserMeta::COMPANY_DESC_DEFAULT;
+		}
+		$description = carbon_get_user_meta($company->id, $metaField);
+		if ($description == null && $metaField != UserMeta::COMPANY_DESC_DEFAULT) {
+			$description = carbon_get_user_meta($company->id, UserMeta::COMPANY_DESC_DEFAULT);
+		}
+		return $description;
 	}
 
 }

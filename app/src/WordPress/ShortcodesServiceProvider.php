@@ -24,6 +24,7 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 		add_shortcode( 'tf-companies', [$this, 'shortcodeCompanies'] );
 		add_shortcode('tf-start-date', [$this, 'shortcodeStartDate']);
 		add_shortcode('tf-end-date', [$this, 'shortcodeEndDate']);
+		add_shortcode('tf-welcome',[$this, 'shortcodeWelcome']);
 	}
 
 	/**
@@ -54,5 +55,9 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 
 	public function shortcodeEndDate(){
 		return TradeFair::view('end-date')->toString();
+	}
+
+	public function shortcodeWelcome(){
+		return TradeFair::view('welcome')->toString();
 	}
 }

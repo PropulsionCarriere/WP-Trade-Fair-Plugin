@@ -26,14 +26,19 @@
 			</div>
 			<div class="tf-form-row">
 				@include('partials.fields.textarea',[
-					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_DESC,
-					'label' => __('Company\'s description', 'trade_fair'),
-					'value' => carbon_get_user_meta(wp_get_current_user()->ID, \TradeFair\CarbonFields\UserMeta::COMPANY_DESC)
+					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_DESC_DEFAULT,
+					'label' => __('Company\'s description (French)', 'trade_fair'),
+					'value' => carbon_get_user_meta(wp_get_current_user()->ID, \TradeFair\CarbonFields\UserMeta::COMPANY_DESC_DEFAULT)
+				])
+				@include('partials.fields.textarea',[
+					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_DESC_EN,
+					'label' => __('Company\'s description (English)', 'trade_fair'),
+					'value' => carbon_get_user_meta(wp_get_current_user()->ID, \TradeFair\CarbonFields\UserMeta::COMPANY_DESC_EN)
 				])
 				@include('partials.fields.media',[
 					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_LOGO,
 					'label' => __('Company\'s logo', 'trade_fair'),
-					'class' => "w-25 ml-2",
+					'class' => "w-50 ml-2",
 					'id' => carbon_get_user_meta(wp_get_current_user()->id, \TradeFair\CarbonFields\UserMeta::COMPANY_LOGO)
 				])
 			</div>

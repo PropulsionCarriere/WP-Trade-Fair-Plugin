@@ -6,7 +6,8 @@ namespace TradeFair\CarbonFields;
 
 class UserMeta
 {
-	const COMPANY_DESC = "trade_fair_company_description";
+	const COMPANY_DESC_DEFAULT = "trade_fair_company_description";
+	const COMPANY_DESC_EN = "trade_fair_company_description_en";
 	const COMPANY_NAME = "trade_fair_company_name";
 	const COMPANY_LOGO = "trade_fair_logo";
 	const COMPANY_LOCATION = "trade_fair_company_country";
