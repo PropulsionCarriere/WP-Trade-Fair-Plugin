@@ -47,7 +47,6 @@
 					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_WEBSITE,
 					'label' => __('Website link', 'trade_fair'),
 				])
-				<div class="ml-2"></div>
 				@include('partials.fields.user-meta-input',[
 					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_CONFERENCE_LINK,
 					'label' => __('Conference tool link', 'trade_fair'),

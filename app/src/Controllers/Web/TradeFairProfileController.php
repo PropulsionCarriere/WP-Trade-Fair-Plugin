@@ -60,7 +60,7 @@ class TradeFairProfileController extends Controller {
 			],
 			UserMeta::COMPANY_SALES_BROCHURE => [
 				'optional',
-				'file',
+				'media',
 			],
 			UserMeta::COMPANY_LOCATION => [
 				'required',

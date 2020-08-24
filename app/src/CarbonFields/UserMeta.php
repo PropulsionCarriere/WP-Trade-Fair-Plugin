@@ -15,6 +15,7 @@ class UserMeta
 		'Canada' => 'Canada',
 		'USA' => 'United-States',
 		'Europe' => 'Europe',
+		'Other' => 'Other'
 	];
 	const COMPANY_WEBSITE = "trade_fair_company_website";
 	const COMPANY_CONFERENCE_LINK = "trade_fair_conference_link";

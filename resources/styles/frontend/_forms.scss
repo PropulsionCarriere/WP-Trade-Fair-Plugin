@@ -8,12 +8,18 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 10px 10px;
   label {
     padding-left: 10px;
     font-weight: bold;
   }
   input, select {
-    margin: 10px;
+    width: 100%;
+  }
+  textarea {
+    min-height: 200px;
+    height: 100%;
+    width: 100%;
   }
 }
 

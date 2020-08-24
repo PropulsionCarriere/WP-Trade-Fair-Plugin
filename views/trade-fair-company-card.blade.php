@@ -16,13 +16,19 @@
 	</div>
 	<div class="tf-company-card-footer">
 		@if($conferenceLink = carbon_get_user_meta($company->id, TradeFair\CarbonFields\UserMeta::COMPANY_CONFERENCE_LINK))
-			<a class="tf-link tf-contact" rel="noopener noreferrer" href="{{esc_attr($conferenceLink)}}"><?= __('Contact now', 'trade_fair')?></a>
+			<a class="tf-link tf-contact" rel="noopener noreferrer" href="{{esc_attr($conferenceLink)}}" target="_blank">
+				<?= __('Contact now', 'trade_fair')?>
+			</a>
 		@endif
 		@if($website = carbon_get_user_meta($company->id, TradeFair\CarbonFields\UserMeta::COMPANY_WEBSITE))
-			<a class="tf-link tf-know-more" rel="noopener noreferrer" href="{{esc_attr__($website)}}"><?php echo __('Learn More', 'trade_fair')?></a>
+			<a class="tf-link tf-know-more" rel="noopener noreferrer" href="{{esc_attr__($website)}}" target="_blank">
+				<?php echo __('Learn More', 'trade_fair')?>
+			</a>
 		@endif
 		@if($brochure = carbon_get_user_meta($company->id, TradeFair\CarbonFields\UserMeta::COMPANY_SALES_BROCHURE))
-			<a class="tf-link tf-sales-brochure" rel="noopener noreferrer" href="{{esc_attr__(wp_get_attachment_url($brochure))}}"><?php echo __('Download sales brochure', 'trade_fair')?></a>
+			<a class="tf-link tf-sales-brochure" rel="noopener noreferrer" href="{{esc_attr__(wp_get_attachment_url($brochure))}}" target="_blank">
+				<?php echo __('Download sales brochure', 'trade_fair')?>
+			</a>
 		@endif
 	</div>
 </div>
