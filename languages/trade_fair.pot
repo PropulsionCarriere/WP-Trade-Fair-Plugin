@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trade Fair 0.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tradefair\n"
-"POT-Creation-Date: 2020-08-24 15:01:11+00:00\n"
+"POT-Creation-Date: 2020-08-24 16:36:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -83,22 +83,26 @@ msgid "Company's name"
 msgstr ""
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:122
-msgid "Company's description"
+msgid "Company's description (French)"
 msgstr ""
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
-msgid "Company's location"
-msgstr ""
-
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:128
-msgid "Website link"
-msgstr ""
-
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:129
-msgid "Conference tool link"
+msgid "Company's description (English)"
 msgstr ""
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:130
+msgid "Company's location"
+msgstr ""
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:132
+msgid "Website link"
+msgstr ""
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:133
+msgid "Conference tool link"
+msgstr ""
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:134
 msgid "Sales brochure"
 msgstr ""
 
@@ -106,23 +110,23 @@ msgstr ""
 msgid "Trade Fair Profile"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:62
+#: app/src/Controllers/Web/TradeFairProfileController.php:72
 msgid "Your profile has been updated successfully."
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:76
+#: app/src/Controllers/Web/TradeFairProfileController.php:86
 msgid "Change"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:77
+#: app/src/Controllers/Web/TradeFairProfileController.php:87
 msgid "Select or upload a media"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:78
+#: app/src/Controllers/Web/TradeFairProfileController.php:88
 msgid "Use selected"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:79
+#: app/src/Controllers/Web/TradeFairProfileController.php:89
 msgid "Preview unavailable"
 msgstr ""
 
