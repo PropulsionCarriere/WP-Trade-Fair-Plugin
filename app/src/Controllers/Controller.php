@@ -53,6 +53,9 @@ class Controller
 
 	private function applyRules($value, $rules){
 		foreach ($rules as $rule){
+			if (is_string($rule)){
+				$rule = 'TradeFair\Validation\Rule::'. $rule;
+			}
 			$value = $rule($value);
 		}
 		return $value;

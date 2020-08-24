@@ -1,7 +1,11 @@
+@include('welcome')
 <div class="tf-companies-grid grid-{{$n_cols??2}}">
-	@foreach($exhibitors as $exhibitor)
-		@if(carbon_get_user_meta($exhibitor->id, TradeFair\CarbonFields\UserMeta::COMPANY_NAME))
-			@php TradeFair::render('trade-fair-company-card',['company'=>$exhibitor]); @endphp
-		@endif
-	@endforeach
+	@if(count($exhibitors) > $n_cols && $period = TradeFair::schedule()->getCurrentPeriod())
+		@include('trade-fair-rotating-companies-list',[
+			'exhibitors' => $exhibitors,
+			'offset' => round($period->relativeTimeElapsed()*count($exhibitors))
+		])
+	@else
+		@include('trade-fair-static-companies-list',['exhibitors' => $exhibitors])
+	@endif
 </div>

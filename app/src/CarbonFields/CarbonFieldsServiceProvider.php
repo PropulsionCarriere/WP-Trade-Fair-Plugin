@@ -83,11 +83,13 @@ class CarbonFieldsServiceProvider implements ServiceProviderInterface {
 			) );
 		Container::make('theme_options', __('Trade Fair', 'trade_fair'))
 		->add_fields([
-			Field::make('text', 'trade_fair_name', __('Trade Fair name', 'trade_fair')),
-			Field::make('date', 'trade_fair_start_date', __('Fair start date', 'trade_fair'))->set_width(50),
-			Field::make('date', 'trade_fair_end_date', __('Fair end date', 'trade_fair'))->set_width(50),
-			Field::make('time', 'trade_fair_start_time', __('Daily start time', 'trade_fair'))->set_width(50),
-			Field::make('time', 'trade_fair_end_time', __('Daily end time', 'trade_fair'))->set_width(50),
+			Field::make('text', TradeFairFields::NAME, __('Trade Fair name', 'trade_fair')),
+			Field::make('complex', TradeFairFields::SCHEDULE)->add_fields([
+				Field::make('date', TradeFairFields::PERIOD_START_DATE, __('Fair period start date', 'trade_fair'))->set_width(50),
+				Field::make('date', TradeFairFields::PERIOD_END_DATE, __('Fair period end date', 'trade_fair'))->set_width(50),
+				Field::make('time', TradeFairFields::PERIOD_START_TIME, __('Period\'s daily start time', 'trade_fair'))->set_width(50),
+				Field::make('time', TradeFairFields::PERIOD_END_TIME , __('Period\'s daily end time', 'trade_fair'))->set_width(50),
+			]),
 		]);
 	}
 
@@ -121,6 +123,8 @@ class CarbonFieldsServiceProvider implements ServiceProviderInterface {
 					->set_help_text('(150 characters maximum)')
 					->set_attribute('maxLength',150)
 					->set_rows(3),
+				Field::make('select', UserMeta::COMPANY_LOCATION, __('Company\'s location', 'trade_fair'))
+					->set_options(UserMeta::COMPANY_LOCATION_OPTIONS),
 				Field::make('text', UserMeta::COMPANY_WEBSITE, __('Website link', 'trade_fair')),
 				Field::make('text', UserMeta::COMPANY_CONFERENCE_LINK, __('Conference tool link', 'trade_fair')),
 				Field::make('file', UserMeta::COMPANY_SALES_BROCHURE, __('Sales brochure', 'trade_fair'))

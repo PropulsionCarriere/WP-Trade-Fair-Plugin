@@ -23,34 +23,37 @@ class TradeFairProfileController extends Controller {
 	public function update(Request $request){
 		$inputs = $this->validate([
 			UserMeta::COMPANY_NAME => [
-				'TradeFair\Validation\Rule::required',
-				'TradeFair\Validation\Rule::text',
+				'required',
+				'text',
 			],
 			UserMeta::COMPANY_DESC => [
-				'TradeFair\Validation\Rule::required',
+				'required',
+				'text',
 				function ($value){
 					if (strlen($value)>150){
 						throw new RuleNotRespectedException("The field cannot be over 150 characters");
 					}
 					return $value;
 				},
-				'TradeFair\Validation\Rule::text',
 			],
 			UserMeta::COMPANY_WEBSITE => [
-				'TradeFair\Validation\Rule::optional',
-				'TradeFair\Validation\Rule::url',
+				'optional',
+				'url',
 			],
 			UserMeta::COMPANY_CONFERENCE_LINK => [
-				'TradeFair\Validation\Rule::required',
-				'TradeFair\Validation\Rule::url',
+				'required',
+				'url',
 			],
 			UserMeta::COMPANY_LOGO => [
-				'TradeFair\Validation\Rule::required',
-				'TradeFair\Validation\Rule::image',
+				'required',
+				'image',
 			],
 			UserMeta::COMPANY_SALES_BROCHURE => [
-				'TradeFair\Validation\Rule::optional',
-				'TradeFair\Validation\Rule::file',
+				'optional',
+				'file',
+			],
+			UserMeta::COMPANY_LOCATION => [
+				'required',
 			]
 		], $request);
 		foreach ($inputs as $field => $value){

@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trade Fair 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tradefair\n"
-"POT-Creation-Date: 2020-08-13 13:15:14+00:00\n"
+"POT-Creation-Date: 2020-08-24 15:01:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-08-13 13:22+0000\n"
+"PO-Revision-Date: 2020-08-24 15:07+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français du Canada\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -53,51 +53,55 @@ msgstr "Foire"
 msgid "Trade Fair name"
 msgstr "Nom de la foire"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:87
-msgid "Fair start date"
-msgstr "Date du début de la foire"
-
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:88
-msgid "Fair end date"
-msgstr "Date de fin de la foire"
+msgid "Fair period start date"
+msgstr "Debut de la periode"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:89
-msgid "Daily start time"
-msgstr "Heure de fin"
+msgid "Fair period end date"
+msgstr "Fin de la periode"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:90
-msgid "Daily end time"
-msgstr "Heure de début"
+msgid "Period's daily start time"
+msgstr "Heure de début quotidienne de la période"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:114
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:91
+msgid "Period's daily end time"
+msgstr "Heure de fin quotidienne de la période"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:116
 msgid "Online Trade Fair"
 msgstr "Foire en ligne"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:117
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:119
 msgid "Your company's profile"
 msgstr "Votre profil de companie"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:118
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:120
 msgid "Company's logo"
 msgstr "Logo de la companie"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:119
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:121
 msgid "Company's name"
 msgstr "Nom de la companie"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:120
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:122
 msgid "Company's description"
 msgstr "Description"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:124
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
+msgid "Company's location"
+msgstr "Emplacement"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:128
 msgid "Website link"
 msgstr "Lien de votre site"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:125
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:129
 msgid "Conference tool link"
 msgstr "Lien vers la conférence"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:130
 msgid "Sales brochure"
 msgstr "Brochure"
 
@@ -105,23 +109,23 @@ msgstr "Brochure"
 msgid "Trade Fair Profile"
 msgstr "Profil de la foire"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:59
+#: app/src/Controllers/Web/TradeFairProfileController.php:62
 msgid "Your profile has been updated successfully."
 msgstr "Votre profil a été mis à jour"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:73
+#: app/src/Controllers/Web/TradeFairProfileController.php:76
 msgid "Change"
 msgstr "Changer"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:74
+#: app/src/Controllers/Web/TradeFairProfileController.php:77
 msgid "Select or upload a media"
 msgstr "Selectionner ou téléverser un fichier"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:75
+#: app/src/Controllers/Web/TradeFairProfileController.php:78
 msgid "Use selected"
 msgstr "Utiliser l'élément selectionné"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:76
+#: app/src/Controllers/Web/TradeFairProfileController.php:79
 msgid "Preview unavailable"
 msgstr "Prévisualisation indisponible"
 
@@ -172,9 +176,10 @@ msgstr ""
 "%1$s utilise WP Emerge version >= %2$s et< %3$s , mais %4$s a déjà chargé "
 "%5$s."
 
-#: views/example.php:12
-msgid "Hello World!"
-msgstr "Hello World!"
+#: views/end-date.blade.php:2 views/start-date.blade.php:2
+#: views/welcome.blade.php:3 views/welcome.blade.php:10
+msgid "F d Y"
+msgstr "d F Y"
 
 #: views/trade-fair-company-card.blade.php:19
 msgid "Contact now"
@@ -188,6 +193,26 @@ msgstr "En savoir plus"
 msgid "Download sales brochure"
 msgstr "Télécharger la brochure"
 
+#: views/trade-fair-static-companies-list.blade.php:2
+msgid "There are currently no companies registered"
+msgstr "Il n'y a présentement pas de companies enregistrées"
+
+#: views/welcome.blade.php:3
+msgid "The trade fair ended on %1$s. Come back next year!"
+msgstr "La foire s'est terminée le %1$s. À l'année prochaine."
+
+#: views/welcome.blade.php:5
+msgid "Companies are currently online until %1$s"
+msgstr "Les entreprises sont en ligne jusqu'à %1$s"
+
+#: views/welcome.blade.php:7
+msgid "Companies are currently offline. Come back tomorrow."
+msgstr "Les companies sont hors-ligne. Revenez demain."
+
+#: views/welcome.blade.php:10
+msgid "The %1$s will start on %2$s."
+msgstr "%1$s va commencer le %2$s."
+
 #. Description of the plugin/theme
 msgid "A plugin to facilitate trade fair organization"
 msgstr ""
@@ -196,3 +221,7 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Michael Duchesne"
 msgstr "Michael Duchesne"
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/Mick00"
+msgstr "https://github.com/Mick00"

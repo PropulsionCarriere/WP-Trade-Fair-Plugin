@@ -14,3 +14,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 // phpcs:ignore
 // require_once __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'myhelper.php';
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'debug.php';
+require_once __DIR__ . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'array_utils.php';

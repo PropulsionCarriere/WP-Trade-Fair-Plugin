@@ -41,7 +41,7 @@ class Rule
 	}
 
 	public static function url($value){
-		self::assertTrue(preg_match("#^https?://.+#",$value), __("This is not a valid url.", 'trade_fair'));
+		self::assertTrue(preg_match("#^https?://.+#", $value), __("This is not a valid url.", 'trade_fair'));
 		return $value;
 	}
 

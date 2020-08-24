@@ -14,10 +14,7 @@ Block::make( __( 'Trade Fair Participants', 'trade_fair' ) )
 			->set_default_value( '2')
 	])
 	->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
-		$exhibitors_query = new WP_User_Query([
-			'role'           => 'exhibitor',
-		]);
 		TradeFair::render('trade-fair-companies-grid', array_merge($fields,[
-			'exhibitors' => $exhibitors_query->get_results(),
+			'exhibitors' => TradeFair::queryExhibitors(),
 		]));
 	} );

@@ -9,11 +9,19 @@
 			@endforeach
 		@endif
 		<!-- //TODO: Add CSRF token -->
-		<form target="" action="{{esc_url(TradeFair::routeUrl('tf-profile.update'))}}" method="post">
+		<form target="" action="{{esc_url(TradeFair::routeUrl('tf-profile.update'))}}" method="post" name="tf-profile">
 			<div class="tf-form-row">
 				@include('partials.fields.user-meta-input',[
 					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_NAME,
 					'label' => __('Company\'s name', 'trade_fair'),
+				])
+				@include('partials.fields.select',[
+					'label' =>__('Company\'s location', 'trade_fair'),
+					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_LOCATION,
+					'options' => array_map(function($value, $key){
+						return ['value'=> $key, 'label' => $value];
+					}, \TradeFair\CarbonFields\UserMeta::COMPANY_LOCATION_OPTIONS, array_keys(\TradeFair\CarbonFields\UserMeta::COMPANY_LOCATION_OPTIONS)),
+					'selected' => carbon_get_user_meta(wp_get_current_user()->ID, \TradeFair\CarbonFields\UserMeta::COMPANY_LOCATION)
 				])
 			</div>
 			<div class="tf-form-row">

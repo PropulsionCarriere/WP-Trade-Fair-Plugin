@@ -22,6 +22,8 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 	 */
 	public function bootstrap( $container ) {
 		add_shortcode( 'tf-companies', [$this, 'shortcodeCompanies'] );
+		add_shortcode('tf-start-date', [$this, 'shortcodeStartDate']);
+		add_shortcode('tf-end-date', [$this, 'shortcodeEndDate']);
 	}
 
 	/**
@@ -35,15 +37,22 @@ class ShortcodesServiceProvider implements ServiceProviderInterface {
 		$atts = shortcode_atts(
 			array(
 				'n_cols' => '2',
+				'location' => null,
+				'exclude' => false,
 			),
 			$atts,
 			'tf-companies'
 		);
-		$exhibitorsQuery = new WP_User_Query([
-			'role'           => 'exhibitor',
-		]);
-		return TradeFair::view( 'trade-fair-companies-grid' )->with( $atts )->with('exhibitors', $exhibitorsQuery->get_results())->toString();
 
+		$exhibitors = TradeFair::queryExhibitors($atts['location'], $atts['exclude']);
+		return TradeFair::view( 'trade-fair-companies-grid' )->with( $atts )->with('exhibitors', $exhibitors)->toString();
+	}
 
+	public function shortcodeStartDate($atts, $content) {
+		return TradeFair::view('start-date')->toString();
+	}
+
+	public function shortcodeEndDate(){
+		return TradeFair::view('end-date')->toString();
 	}
 }

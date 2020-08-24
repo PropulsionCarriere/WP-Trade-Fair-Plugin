@@ -22,7 +22,7 @@
 			<a class="tf-link tf-know-more" rel="noopener noreferrer" href="{{esc_attr__($website)}}"><?php echo __('Learn More', 'trade_fair')?></a>
 		@endif
 		@if($brochure = carbon_get_user_meta($company->id, TradeFair\CarbonFields\UserMeta::COMPANY_SALES_BROCHURE))
-			<a class="tf-link tf-sales-brochure" rel="noopener noreferrer" href="{{esc_attr__($brochure)}}"><?php echo __('Download sales brochure', 'trade_fair')?></a>
+			<a class="tf-link tf-sales-brochure" rel="noopener noreferrer" href="{{esc_attr__(wp_get_attachment_url($brochure))}}"><?php echo __('Download sales brochure', 'trade_fair')?></a>
 		@endif
 	</div>
 </div>
