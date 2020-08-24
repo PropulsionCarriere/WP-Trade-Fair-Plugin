@@ -3,7 +3,7 @@
  * Plugin Name: Trade Fair
  * Plugin URI:
  * Description: A plugin to facilitate trade fair organization
- * Version: 0.1.2
+ * Version: 1.0.0
  * Requires at least: 4.7
  * Requires PHP: 5.5.9
  * Author: Michael Duchesne
