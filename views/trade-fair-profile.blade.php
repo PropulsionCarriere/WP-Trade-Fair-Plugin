@@ -25,6 +25,13 @@
 				])
 			</div>
 			<div class="tf-form-row">
+				@include('partials.fields.checkbox',[
+					'label' => __('Company is pedagogical'),
+					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_IS_PEDAGOGICAL,
+					'value' => carbon_get_user_meta(wp_get_current_user()->ID, \TradeFair\CarbonFields\UserMeta::COMPANY_IS_PEDAGOGICAL)
+				])
+			</div>
+			<div class="tf-form-row">
 				@include('partials.fields.textarea',[
 					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_DESC_DEFAULT,
 					'label' => __('Company\'s description (French)', 'trade_fair'),
@@ -50,6 +57,10 @@
 				@include('partials.fields.user-meta-input',[
 					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_CONFERENCE_LINK,
 					'label' => __('Conference tool link', 'trade_fair'),
+				])
+				@include('partials.fields.user-meta-input',[
+					'name' => \TradeFair\CarbonFields\UserMeta::COMPANY_ACCOUNTING_LINK,
+					'label' => __('Accounting link', 'trade_fair'),
 				])
 			</div>
 			<div class="tf-form-row" style="max-width: 200px">

@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trade Fair 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tradefair\n"
-"POT-Creation-Date: 2020-08-24 16:36:52+00:00\n"
+"POT-Creation-Date: 2020-09-10 15:27:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-08-24 16:37+0000\n"
+"PO-Revision-Date: 2020-09-10 15:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: French (Canada)\n"
 "X-Generator: Loco https://localise.biz/\n"
@@ -86,26 +86,34 @@ msgid "Company's name"
 msgstr "Nom de la companie"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:122
+msgid "Company is pedagogical"
+msgstr "Entreprise pédagogique"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:123
 msgid "Company's description (French)"
 msgstr "Description (Français)"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:127
 msgid "Company's description (English)"
 msgstr "Description (Anglais)"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:130
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:131
 msgid "Company's location"
 msgstr "Emplacement"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:132
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:133
 msgid "Website link"
 msgstr "Lien de votre site"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:133
-msgid "Conference tool link"
-msgstr "Lien vers la conférence"
-
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:134
+msgid "Sales link"
+msgstr "Lien vers les vendeurs"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:135
+msgid "Accounting link"
+msgstr "Lien pour la comptabilité"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:136
 msgid "Sales brochure"
 msgstr "Brochure"
 
@@ -113,23 +121,23 @@ msgstr "Brochure"
 msgid "Trade Fair Profile"
 msgstr "Profil de la foire"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:72
+#: app/src/Controllers/Web/TradeFairProfileController.php:79
 msgid "Your profile has been updated successfully."
 msgstr "Votre profil a été mis à jour"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:86
+#: app/src/Controllers/Web/TradeFairProfileController.php:93
 msgid "Change"
 msgstr "Changer"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:87
+#: app/src/Controllers/Web/TradeFairProfileController.php:94
 msgid "Select or upload a media"
 msgstr "Selectionner ou téléverser un fichier"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:88
+#: app/src/Controllers/Web/TradeFairProfileController.php:95
 msgid "Use selected"
 msgstr "Utiliser l'élément selectionné"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:89
+#: app/src/Controllers/Web/TradeFairProfileController.php:96
 msgid "Preview unavailable"
 msgstr "Prévisualisation indisponible"
 
@@ -145,9 +153,13 @@ msgstr "Cette adresse n'est pas valide"
 msgid "This needs to be an image."
 msgstr "Ce fichier doit être une image"
 
-#: app/src/Validation/Rule.php:60
+#: app/src/Validation/Rule.php:64
 msgid "This needs to be a file."
 msgstr "Ce fichier doit être un fichier d'application"
+
+#: app/src/Validation/Rule.php:74
+msgid "This needs to be a file or an image"
+msgstr "Ceci doit être un fichier ou une image"
 
 #: app/src/Widgets/Carbon_Rich_Text_Widget.php:18
 msgid "Rich Text"
@@ -185,21 +197,33 @@ msgstr ""
 msgid "F d Y"
 msgstr "d F Y"
 
-#: views/trade-fair-company-card.blade.php:19
-msgid "Contact now"
-msgstr "Contacter"
-
-#: views/trade-fair-company-card.blade.php:22
-msgid "Learn More"
-msgstr "En savoir plus"
-
-#: views/trade-fair-company-card.blade.php:25
-msgid "Download sales brochure"
-msgstr "Télécharger la brochure"
-
-#: views/trade-fair-static-companies-list.blade.php:2
+#: views/trade-fair-companies-grid.blade.php:2
 msgid "There are currently no companies registered"
 msgstr "Il n'y a présentement pas de companies enregistrées"
+
+#: views/trade-fair-company-card.blade.php:6
+msgid "SPE"
+msgstr "EEP"
+
+#: views/trade-fair-company-card.blade.php:6
+msgid "PE"
+msgstr "EE"
+
+#: views/trade-fair-company.blade.php:21
+msgid "Talk to a salesman"
+msgstr "Parler à un vendeur"
+
+#: views/trade-fair-company.blade.php:26
+msgid "Make a transaction"
+msgstr "Faire une transaction"
+
+#: views/trade-fair-company.blade.php:31
+msgid "Read sales brochure"
+msgstr "Consulter la brochure"
+
+#: views/trade-fair-company.blade.php:36
+msgid "Visit website"
+msgstr "Visiter leur site web"
 
 #: views/welcome.blade.php:3
 msgid "The trade fair ended on %1$s. Come back next year!"

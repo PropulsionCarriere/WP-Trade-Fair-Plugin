@@ -119,6 +119,7 @@ class CarbonFieldsServiceProvider implements ServiceProviderInterface {
 				Field::make('separator', 'tf-company-separator', __('Your company\'s profile', 'trade_fair')),
 				Field::make('image', UserMeta::COMPANY_LOGO, __('Company\'s logo', 'trade_fair') ),
 				Field::make('text', UserMeta::COMPANY_NAME, __('Company\'s name', 'trade_fair') ),
+				Field::make('checkbox', UserMeta::COMPANY_IS_PEDAGOGICAL, __('Company is pedagogical', 'trade_fair')),
 				Field::make('textarea', UserMeta::COMPANY_DESC_DEFAULT, __('Company\'s description (French)', 'trade_fair'))
 					->set_help_text('(150 characters maximum)')
 					->set_attribute('maxLength',150)
@@ -130,7 +131,8 @@ class CarbonFieldsServiceProvider implements ServiceProviderInterface {
 				Field::make('select', UserMeta::COMPANY_LOCATION, __('Company\'s location', 'trade_fair'))
 					->set_options(UserMeta::COMPANY_LOCATION_OPTIONS),
 				Field::make('text', UserMeta::COMPANY_WEBSITE, __('Website link', 'trade_fair')),
-				Field::make('text', UserMeta::COMPANY_CONFERENCE_LINK, __('Conference tool link', 'trade_fair')),
+				Field::make('text', UserMeta::COMPANY_CONFERENCE_LINK, __('Sales link', 'trade_fair')),
+				Field::make('text', UserMeta::COMPANY_ACCOUNTING_LINK, __('Accounting link', 'trade_fair')),
 				Field::make('file', UserMeta::COMPANY_SALES_BROCHURE, __('Sales brochure', 'trade_fair'))
 			]);
 	}

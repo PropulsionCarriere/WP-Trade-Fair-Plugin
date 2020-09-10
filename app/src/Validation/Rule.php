@@ -71,7 +71,7 @@ class Rule
 
 	public static function media($attachmentId){
 		$type = get_post_mime_type($attachmentId);
-		self::assertTrue(self::isApplicationMime($type)||self::isImageMime($type),__("This needs to be a file or an image"));
+		self::assertTrue(self::isApplicationMime($type)||self::isImageMime($type),__("This needs to be a file or an image", 'trade_fair'));
 		return $attachmentId;
 	}
 
@@ -85,6 +85,10 @@ class Rule
 			throw new NullableException("Skipping next rules. Value is null");
 		}
 		return $value;
+	}
+
+	public static function boolean($value){
+		return !empty($value);
 	}
 
 }

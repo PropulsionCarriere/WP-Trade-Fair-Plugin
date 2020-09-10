@@ -2,9 +2,9 @@
 # This file is distributed under the GPL-2.0-only.
 msgid ""
 msgstr ""
-"Project-Id-Version: Trade Fair 0.1.2\n"
+"Project-Id-Version: Trade Fair 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tradefair\n"
-"POT-Creation-Date: 2020-08-24 16:36:52+00:00\n"
+"POT-Creation-Date: 2020-09-10 15:27:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -83,26 +83,34 @@ msgid "Company's name"
 msgstr ""
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:122
+msgid "Company is pedagogical"
+msgstr ""
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:123
 msgid "Company's description (French)"
 msgstr ""
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:127
 msgid "Company's description (English)"
 msgstr ""
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:130
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:131
 msgid "Company's location"
 msgstr ""
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:132
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:133
 msgid "Website link"
 msgstr ""
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:133
-msgid "Conference tool link"
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:134
+msgid "Sales link"
 msgstr ""
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:134
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:135
+msgid "Accounting link"
+msgstr ""
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:136
 msgid "Sales brochure"
 msgstr ""
 
@@ -110,23 +118,23 @@ msgstr ""
 msgid "Trade Fair Profile"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:72
+#: app/src/Controllers/Web/TradeFairProfileController.php:79
 msgid "Your profile has been updated successfully."
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:86
+#: app/src/Controllers/Web/TradeFairProfileController.php:93
 msgid "Change"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:87
+#: app/src/Controllers/Web/TradeFairProfileController.php:94
 msgid "Select or upload a media"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:88
+#: app/src/Controllers/Web/TradeFairProfileController.php:95
 msgid "Use selected"
 msgstr ""
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:89
+#: app/src/Controllers/Web/TradeFairProfileController.php:96
 msgid "Preview unavailable"
 msgstr ""
 
@@ -142,8 +150,12 @@ msgstr ""
 msgid "This needs to be an image."
 msgstr ""
 
-#: app/src/Validation/Rule.php:60
+#: app/src/Validation/Rule.php:64
 msgid "This needs to be a file."
+msgstr ""
+
+#: app/src/Validation/Rule.php:74
+msgid "This needs to be a file or an image"
 msgstr ""
 
 #: app/src/Widgets/Carbon_Rich_Text_Widget.php:18
@@ -180,20 +192,32 @@ msgstr ""
 msgid "F d Y"
 msgstr ""
 
-#: views/trade-fair-company-card.blade.php:19
-msgid "Contact now"
-msgstr ""
-
-#: views/trade-fair-company-card.blade.php:22
-msgid "Learn More"
-msgstr ""
-
-#: views/trade-fair-company-card.blade.php:25
-msgid "Download sales brochure"
-msgstr ""
-
-#: views/trade-fair-static-companies-list.blade.php:2
+#: views/trade-fair-companies-grid.blade.php:2
 msgid "There are currently no companies registered"
+msgstr ""
+
+#: views/trade-fair-company-card.blade.php:6
+msgid "SPE"
+msgstr ""
+
+#: views/trade-fair-company-card.blade.php:6
+msgid "PE"
+msgstr ""
+
+#: views/trade-fair-company.blade.php:21
+msgid "Talk to a salesman"
+msgstr ""
+
+#: views/trade-fair-company.blade.php:26
+msgid "Make a transaction"
+msgstr ""
+
+#: views/trade-fair-company.blade.php:31
+msgid "Read sales brochure"
+msgstr ""
+
+#: views/trade-fair-company.blade.php:36
+msgid "Visit website"
 msgstr ""
 
 #: views/welcome.blade.php:3

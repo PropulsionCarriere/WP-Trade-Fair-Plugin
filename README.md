@@ -69,7 +69,15 @@ Here are some plugins to improve/complete the Trade Fair plugin:
 You can customise the colors in the trade fair profile by setting css variable. Current css variables are:
 
 --tf-accent-color
+--tf-text-accent-color //Text color when used on --tf-accent-color background color
 --tf-error-color
+
+To modifify the company grid:
+
+--tf-border-width
+--tf-border-radius
+--tf-border-style
+--tf-border-color
 
 The current css is very light. You can easily modify the appearance by overriding the css in your theme's css or by cloning the project.
 

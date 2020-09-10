@@ -1,15 +1,20 @@
 .tf-company-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-width: var(--tf-border-width, 1px);
+  border-radius: var(--tf-border-radius, 0px);
+  border-style: var(--tf-border-style, solid);
+  border-color: var(--tf-border-color, $color-material-grey);
   .tf-company-name {
     text-align: center;
     font-weight: bold;
     font-size: map_get($font-size,'l');
   }
-
-  .tf-company-card-body {
-    flex: 1 0 auto;
+  &, * {
+    transition: transform 0.2s;
+  }
+  &:hover {
+    &, * {
+      transform: scale(1.03, 1.03);
+    }
   }
 }
 
@@ -20,4 +25,15 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
+  position: relative;
+  .tf-type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.8em 0.8em;
+    font-size: 0.7em;
+    background-color: var(--tf-accent-color, yellow);
+    color: var(--tf-text-accent-color, black);
+    border-radius: 3em;
+  }
 }

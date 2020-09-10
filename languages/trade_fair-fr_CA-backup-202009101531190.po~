@@ -4,13 +4,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trade Fair 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tradefair\n"
-"POT-Creation-Date: 2020-08-24 15:01:11+00:00\n"
+"POT-Creation-Date: 2020-08-24 16:36:52+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-08-24 15:07+0000\n"
+"PO-Revision-Date: 2020-08-24 16:37+0000\n"
 "Last-Translator: \n"
-"Language-Team: Français du Canada\n"
+"Language-Team: French (Canada)\n"
 "X-Generator: Loco https://localise.biz/\n"
 "Language: fr_CA\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
@@ -86,22 +86,26 @@ msgid "Company's name"
 msgstr "Nom de la companie"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:122
-msgid "Company's description"
-msgstr "Description"
+msgid "Company's description (French)"
+msgstr "Description (Français)"
 
 #: app/src/CarbonFields/CarbonFieldsServiceProvider.php:126
+msgid "Company's description (English)"
+msgstr "Description (Anglais)"
+
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:130
 msgid "Company's location"
 msgstr "Emplacement"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:128
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:132
 msgid "Website link"
 msgstr "Lien de votre site"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:129
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:133
 msgid "Conference tool link"
 msgstr "Lien vers la conférence"
 
-#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:130
+#: app/src/CarbonFields/CarbonFieldsServiceProvider.php:134
 msgid "Sales brochure"
 msgstr "Brochure"
 
@@ -109,23 +113,23 @@ msgstr "Brochure"
 msgid "Trade Fair Profile"
 msgstr "Profil de la foire"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:62
+#: app/src/Controllers/Web/TradeFairProfileController.php:72
 msgid "Your profile has been updated successfully."
 msgstr "Votre profil a été mis à jour"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:76
+#: app/src/Controllers/Web/TradeFairProfileController.php:86
 msgid "Change"
 msgstr "Changer"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:77
+#: app/src/Controllers/Web/TradeFairProfileController.php:87
 msgid "Select or upload a media"
 msgstr "Selectionner ou téléverser un fichier"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:78
+#: app/src/Controllers/Web/TradeFairProfileController.php:88
 msgid "Use selected"
 msgstr "Utiliser l'élément selectionné"
 
-#: app/src/Controllers/Web/TradeFairProfileController.php:79
+#: app/src/Controllers/Web/TradeFairProfileController.php:89
 msgid "Preview unavailable"
 msgstr "Prévisualisation indisponible"
 

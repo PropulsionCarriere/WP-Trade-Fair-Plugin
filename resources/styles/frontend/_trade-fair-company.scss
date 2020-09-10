@@ -1,0 +1,26 @@
+.tf-company-header {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  .tf-company-name {
+    margin: 0 15px;
+  }
+}
+
+.tf-company-body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  .tf-company-body {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    .tf-company-links {
+      flex: 0 0 auto;
+    }
+  }
+}

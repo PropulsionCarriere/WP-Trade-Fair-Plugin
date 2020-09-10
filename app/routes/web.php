@@ -30,3 +30,8 @@ TradeFair::route()->middleware('user.logged_in')
 		TradeFair::route()->middleware('validation')->name('.update')->post()->handle('TradeFairProfileController@update');
 	});
 
+TradeFair::route()
+	->url('/trade-fair/company/{company_id}')
+	->name('tf-company')
+	->get()->handle("TradeFairCompanyViewer@index");
+

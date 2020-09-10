@@ -26,6 +26,36 @@ class TradeFair {
 		return carbon_get_theme_option(\TradeFair\CarbonFields\TradeFairFields::NAME);
 	}
 
+	public function getExhibitorByID($id){
+		$query = new WP_User_Query( array ( 'id' => $id ) );
+		$results = $query->get_results();
+		if (empty($results)){
+			return null;
+		}
+		return $results[0];
+	}
+
+	public function getExhibitorNameByID($id){
+		return carbon_get_user_meta($id, TradeFair\CarbonFields\UserMeta::COMPANY_NAME);
+	}
+
+	public function getExhibitorProfileURLByID($id){
+		try {
+			return TradeFair::routeUrl('tf-company', ['company_id' => $id]);
+		} catch (Exception $e){}
+		return "notFound";
+	}
+
+	public function getExhibitorLogoByID($id, $width, $height, $crop = false){
+		$thumbnail = carbon_get_user_meta($id, TradeFair\CarbonFields\UserMeta::COMPANY_LOGO);
+		if (!$thumbnail){
+			return false;
+		}
+		return '<img class="tf-company-logo"
+					 src="'.TradeFair::core()->image()->thumbnail( $thumbnail, $width, $height, $crop).'"
+					 alt="'.carbon_get_user_meta($id, TradeFair\CarbonFields\UserMeta::COMPANY_NAME).' logo"/>';
+	}
+
 	public function queryExhibitors($countries = null, $exclude = false): array{
 		$params = [
 			'role'           => 'exhibitor',
@@ -68,6 +98,10 @@ class TradeFair {
 	}
 
 	public function getCompanyDescription($company){
+		return self::getCompanyDescriptionByID($company->id);
+	}
+
+	public function getCompanyDescriptionByID($companyID){
 		$locale = explode("_", get_locale());
 		$language = $locale[0];
 		$metaField = UserMeta::COMPANY_DESC_DEFAULT;
@@ -80,9 +114,9 @@ class TradeFair {
 			default:
 				$metaField = UserMeta::COMPANY_DESC_DEFAULT;
 		}
-		$description = carbon_get_user_meta($company->id, $metaField);
+		$description = carbon_get_user_meta($companyID, $metaField);
 		if ($description == null && $metaField != UserMeta::COMPANY_DESC_DEFAULT) {
-			$description = carbon_get_user_meta($company->id, UserMeta::COMPANY_DESC_DEFAULT);
+			$description = carbon_get_user_meta($companyID, UserMeta::COMPANY_DESC_DEFAULT);
 		}
 		return $description;
 	}

@@ -46,11 +46,18 @@ class TradeFairProfileController extends Controller {
 					return $value;
 				},
 			],
+			UserMeta::COMPANY_IS_PEDAGOGICAL => [
+				'boolean'
+			],
 			UserMeta::COMPANY_WEBSITE => [
 				'optional',
 				'url',
 			],
 			UserMeta::COMPANY_CONFERENCE_LINK => [
+				'required',
+				'url',
+			],
+			UserMeta::COMPANY_ACCOUNTING_LINK => [
 				'required',
 				'url',
 			],
